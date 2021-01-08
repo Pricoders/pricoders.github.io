@@ -32,7 +32,7 @@ tr, td, th {
 }
 small {display: block;}
 table.items th { padding:12px 0; text-align: left;}
-table.items tr {border-top: 1px solid #eff2f7;}
+table.items tr {border-top-width: 1px; border-top-color:#eff2f7; border-top-style:solid; }
 table.items tr:last-child {border-bottom: 1px solid #eff2f7;}
 tr.total td { padding: 0.2em 0 }
 tr.item td { padding: 0.5em 0; line-height: 1.5em; vertical-align: middle; font-size: 12px;}
@@ -46,8 +46,8 @@ td.balance {text-align: right; font-size:1.5em; color:#3C4858;}
 address { white-space: pre; padding: 0 0 1em; font-style: normal }
 address.to { margin: 0; font-size: 12px;}
 address.to span.title { margin: 0; line-height: 2em; font-size: 14px;}
-address.from span { font-weight: bold;}
-address.from {text-align: right;}
+ul.from { list-style: none;}
+ul.from li {text-align: right; display: block;}
 aside ul {list-style: none;}
 aside ul li {display: inline; padding: 0; margin: 0 0 0 1.250em;}
 aside { float: right; }
@@ -68,11 +68,12 @@ table td.title {color:#6e00ff; line-height: 2em;}
     <li>No: #0000230</li>
     <li style="font-weight:bold; color:Green;">PAGADA!</li>
   </ul>
-<address class="from">
-  <span style="color:#3C4858;">Placeholder, SAS.</span>
-  NIT: 900592846
-  billing@permalinkgroup.com
-</address>
+  &nbsp;&nbsp;
+<ul class="from">
+  <li style="color:#3C4858; font-weight:bold;">Placeholder, SAS.</li>
+  <li>NIT: 900592846</li>
+  <li>billing@permalinkgroup.com</li>
+</ul>
 </aside>
 
 <img style="margin-bottom:4em;" src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" height="30">
