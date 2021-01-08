@@ -1,0 +1,173 @@
+
+<html>
+<head>
+  <title>Factura Print</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body, div, h1, h2, h3, p, blockquote, ul, ol, li, pre {
+  margin: 0; padding: 0 }
+li { margin-left: 1.5em }
+html { height:100%; }
+@page {size: a4; margin: 20mm }
+@media screen { body { margin: 5em }}
+@media print { footer {page-break-after:always; } }
+
+body { font: 11pt Arial, serif; color: #8492a6; }
+q::before { content: "\201C"; }
+q::after { content: "\201D"; }
+q { font-style: italic }
+h2, h3 { font-size: 1.1em; margin: 0.8em 0 0.4em }
+p, li { margin: 0.2em 0 0.4em }
+ul, ol { margin: 0.2em 0 0.4em 1.5em }
+a { text-decoration: none; color: inherit }
+
+table { width: 100%; margin: 1em 0; padding: 0; border: none; border-collapse: collapse }
+tr, td, th {
+  padding: 0;
+  text-align: left;
+  border: none;
+  vertical-align: top;
+  font-size: 14px;
+}
+small {display: block;}
+table.items th { padding:12px 0; text-align: left;}
+table.items tr {border-top: 1px solid #eff2f7;}
+table.items tr:last-child {border-bottom: 1px solid #eff2f7;}
+tr.total td { padding: 0.2em 0 }
+tr.item td { padding: 0.5em 0; line-height: 1.5em; vertical-align: middle; font-size: 12px;}
+tr.item td span { color:#3C4858; padding-right: 10px;}
+tr.item td small { font-size: 10px; padding-right: 10px;}
+tr.item td:last-child {text-align:right;}
+tr.instruction td { padding: 3em 0 1em }
+table .amount { text-align: right }
+td.balance {text-align: right; font-size:1.5em; color:#3C4858;}
+
+address { white-space: pre; padding: 0 0 1em; font-style: normal }
+address.to { margin: 0; font-size: 12px;}
+address.to span.title { margin: 0; line-height: 2em; font-size: 14px;}
+address.from span { font-weight: bold;}
+address.from {text-align: right;}
+aside ul {list-style: none;}
+aside ul li {display: inline; padding: 0; margin: 0 0 0 1.250em;}
+aside { float: right; }
+footer {  border-top: 1px solid #eff2f7; padding: 1em 0; margin: 1em 0 0; position:fixed; bottom:5mm; left:0; font-size: 70%; text-align: center; width: 100%; vertical-align:bottom;}
+section {white-space: pre;}
+.notes, .terms { font-size: 10px;}
+section p { font-weight: bold; font-size: 13px;}
+span.title {color:#6e00ff; line-height: 2em;}
+table td.title {color:#6e00ff; line-height: 2em;}
+
+</style>
+</head>
+<body>
+
+<aside>
+  <ul>
+    <li style="font-weight:bold;">Factura de Venta</li>
+    <li>No: #0000230</li>
+    <li style="font-weight:bold; color:Green;">PAGADA!</li>
+  </ul>
+<address class="from">
+  <span style="color:#3C4858;">Placeholder, SAS.</span>
+  NIT: 900592846
+  billing@permalinkgroup.com
+</address>
+</aside>
+
+<img style="margin-bottom:4em;" src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" height="30">
+
+
+<address class="to">
+<span class="title">Cliente</span>
+Oficios Varios de Colombia S.A.S
+NIT: 900564089
+Teléfono: 2686680
+Carrera 49 # 139 Sur 31 Caldas, Antioquia
+</address>
+&nbsp;&nbsp;
+<table>
+<tr><td class="title">Fecha de Facturación</td><td class="title" colspan=2>Número de Factura</td><td style="text-align:right;" class="title" colspan=2>Total a pagar (COP)</td></tr>
+<tr><td>17/05/2016</td><td colspan=2>0000230</td><td class="balance" colspan=2>$5,825,000.00</td></tr>
+<tr><td class="title">Fecha de Vencimiento</td><td colspan=2></td><td colspan=2></td></tr>
+<tr><td>17/05/2016</td><td colspan=2></td><td colspan=2></td></tr>
+</table>
+
+<table class="items" style="margin-top:20px;">
+  <thead>
+    <tr>
+      <th style="width:30%;">Descripción</th>
+      <th style="width:20%;">Precio</th>
+      <th style="width:15%;">Impuesto</th>
+      <th style="width:15%;">Cantidad</th>
+      <th style="text-align:right; width:20%;">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="item">
+      <td>
+        <span>Diseño Web</span>
+        <small>Diseño Nuevo para Tutu Project website, 15 horas.</small>
+      </td>
+      <td>$500,000.00</td>
+      <td>19%</td>
+      <td>1</td>
+      <td>$500,000.00</td>
+    </tr>
+    <tr class="item">
+      <td>
+        <span>Consultoria SEO Avanzado mensual</span>
+        <small>Optimización y posicionamiento en motores de búsqueda por 4 meses.</small>
+      </td>
+      <td>$500,000.00</td>
+      <td>19%</td>
+      <td>4</td>
+      <td>$2.000,000.00</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <table class="total-invoice" style="text-align:right; margin-top:30px; width:30%;">
+    <tr>
+      <th><span>Total</span></th>
+      <td>$500,000.00</td>
+    </tr>
+    <tr>
+      <th><span>IVA (19%)</span></th>
+      <td>$950,000</td>
+    </tr>
+    <tr>
+      <th><span>Retefuente (2.5%):</span></th>
+      <td>$125,000</td>
+    </tr>
+    <tr>
+      <th><strong>Total</strong></th>
+      <td><strong>$5,825,000.00 (COP)</strong></td>
+    </tr>
+  </table>
+
+
+
+
+<section class="notes">
+<p>Notas</p>
+PÁGUESE A LA CUENTA DE AHORROS BANCOLOMBIA No: 00794854190
+</section>
+
+<section class="terms">
+<p>Términos y Condiciones</p>
+EL NO PAGO OPORTUNO DE LA FACTURA OCASIONARÁ LA SUSPENSIÓN DEL
+SERVICIO. El presente documento constituye una factura cambiaría de compra venta
+cuando no ha sido cancelada y es aceptada por el adquiriente. Se asimila en sus
+efectos a la letra de cambio.
+</section>
+
+<footer>
+  <p><small>RESOLUCION DIAN No. 110000527619 EXPEDIDA EL 18/04/2013 HABILITA DEL No. 1 AL No. 1000.</small>
+</footer>
+
+</body>
+</html>
+
+
